@@ -56,7 +56,7 @@ function create_shortcode(){
       $query = get_posts($args);
       foreach($query as $key=>$value)
       {
-         $gallery_data_from_postmeta=get_post_meta( $value->ID, '_custom_receipt_gallery', true );
+         $gallery_data_from_postmeta=get_post_meta( $value->ID, '_custom_product_gallery', true );
          if(empty($gallery_data_from_postmeta))
          {
             $the_post_thumbnail_id=get_post_thumbnail_id($value->ID);
@@ -69,7 +69,7 @@ function create_shortcode(){
                  
                   //   $gallery_data['image_url'][]  = $the_post_thumbnail_url;
                     
-                  update_post_meta( $value->ID, '_custom_receipt_gallery', $the_post_thumbnail_id );
+                  update_post_meta( $value->ID, '_custom_product_gallery', $the_post_thumbnail_id );
         
                 // if ( $gallery_data ) 
                      
