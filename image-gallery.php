@@ -10,7 +10,7 @@ function custom_meta_box_markup($post) {
     $_custom_product_gallery = !empty($_custom_product_gallery) ? explode(',', $_custom_product_gallery) : array();
     // var_dump(wp_get_attachment_image(50, 'thumbnail'));
     // exit;
-    echo '<input type="button" class="button" value="Set Receipt Images" is-multiple="1" id="custom_product_gallery_button">';
+    echo '<input type="button" class="button" style="margin-bottom:5px" value="Set Receipt Images" is-multiple="1" id="custom_product_gallery_button">';
     echo '<div id="custom_product_gallery_container">';
     echo '<div class="lightbox_slider_container"><div class="custom_slider">';
     foreach ($_custom_product_gallery as $image_id) {
@@ -28,13 +28,13 @@ function custom_meta_box_markup($post) {
     echo '</div>';
     echo '<button class="slider__prev">
         <img
-          src="https://pixpine.com/wp-content/themes/pixpine/assets/images/pagination_left_icon.png"
+          src="'.plugins_url('assets/images/pagination_left_icon.png', __FILE__).'"
           alt="Previous"
         />
       </button>
       <button class="slider__next">
         <img
-          src="https://pixpine.com/wp-content/themes/pixpine/assets/images/pagination_right_icon.png"
+          src="'.plugins_url('assets/images/pagination_right_icon.png', __FILE__).'"
           alt="Next"
         />
       </button>';
@@ -44,14 +44,14 @@ function custom_meta_box_markup($post) {
       <button class="lightbox__close">×</button>
       <button class="lightbox__prev">
         <img
-          src="https://pixpine.com/wp-content/themes/pixpine/assets/images/pagination_left_icon.png"
+          src="'.plugins_url('assets/images/pagination_left_icon.png', __FILE__).'"
           alt="Previous"
         />
       </button>
       <div class="lightbox__content"></div>
       <button class="lightbox__next">
         <img
-          src="https://pixpine.com/wp-content/themes/pixpine/assets/images/pagination_right_icon.png"
+          src="'.plugins_url('assets/images/pagination_right_icon.png', __FILE__).'"
           alt="Next"
         />
       </button>

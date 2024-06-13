@@ -21,13 +21,13 @@ function save_custom_product_gallery() {
     echo '</div>';
     echo '<button class="slider__prev">
         <img
-          src="https://pixpine.com/wp-content/themes/pixpine/assets/images/pagination_left_icon.png"
+          src="'.plugins_url('assets/images/pagination_left_icon.png', __FILE__).'"
           alt="Previous"
         />
       </button>
       <button class="slider__next">
         <img
-          src="https://pixpine.com/wp-content/themes/pixpine/assets/images/pagination_right_icon.png"
+          src="'.plugins_url('assets/images/pagination_right_icon.png', __FILE__).'"
           alt="Next"
         />
       </button>';
@@ -37,14 +37,14 @@ function save_custom_product_gallery() {
       <button class="lightbox__close">×</button>
       <button class="lightbox__prev">
         <img
-          src="https://pixpine.com/wp-content/themes/pixpine/assets/images/pagination_left_icon.png"
+          src="'.plugins_url('assets/images/pagination_left_icon.png', __FILE__).'"
           alt="Previous"
         />
       </button>
       <div class="lightbox__content"></div>
       <button class="lightbox__next">
         <img
-          src="https://pixpine.com/wp-content/themes/pixpine/assets/images/pagination_right_icon.png"
+          src="'.plugins_url('assets/images/pagination_right_icon.png', __FILE__).'"
           alt="Next"
         />
       </button>

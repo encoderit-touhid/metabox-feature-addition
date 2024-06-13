@@ -20,7 +20,11 @@
         e.preventDefault();
        // slider_functionalities();
     }) 
-    
+    $(document).on('click','.lightbox__prev',function(e){
+        e.preventDefault();
+       // slider_functionalities();
+    }) 
+       
     
  })( jQuery );
 

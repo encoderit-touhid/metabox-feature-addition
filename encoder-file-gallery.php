@@ -7,7 +7,7 @@
  */
 
  //define('POST_TYPE','greentech_sectors');
- define('POST_TYPE','post');
+ define('POST_TYPE','expense');
  
  //require_once( dirname( __FILE__ ).'/custom-gallery.php' );
  require_once( dirname( __FILE__ ).'/image-gallery.php' );
@@ -20,11 +20,11 @@
 
         wp_enqueue_script('custom-gallery-meta-box', plugins_url('/assets/meta_box_scripts.js', __FILE__), array('jquery'), null, true);
         wp_enqueue_script('custom-gallery-script', plugins_url('/assets/scripts.js', __FILE__), array('jquery'), null, true);
-        wp_enqueue_script('custom-gallery-script-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array('jquery'), null, true);
+       // wp_enqueue_script('custom-gallery-script-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array('jquery'), null, true);
         
         
         wp_enqueue_style('custom-gallery-style', plugins_url('assets/style.css', __FILE__));
-        wp_enqueue_style('custom-gallery-style-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
+      //  wp_enqueue_style('custom-gallery-style-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
     
    
 }
