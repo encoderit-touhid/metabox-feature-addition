@@ -7,7 +7,7 @@
  */
 
  //define('POST_TYPE','greentech_sectors');
- define('POST_TYPE','expense');
+ define('POST_TYPE','post');
  
  //require_once( dirname( __FILE__ ).'/custom-gallery.php' );
  require_once( dirname( __FILE__ ).'/image-gallery.php' );
