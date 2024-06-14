@@ -159,3 +159,10 @@
   background-color: #fff;
   color: #000;
 }
+
+.arrow_false .slider__prev,
+.arrow_false .slider__next,
+.arrow_false .lightbox__prev,
+.arrow_false .lightbox__next {
+  display: none !important;
+}

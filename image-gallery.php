@@ -9,11 +9,17 @@ function custom_meta_box_markup($post) {
    
     echo '<input type="hidden" id="_custom_product_gallery" name="_custom_product_gallery" value="'.$_custom_product_gallery.'" >';
     $_custom_product_gallery = !empty($_custom_product_gallery) ? explode(',', $_custom_product_gallery) : array();
-    // var_dump(wp_get_attachment_image(50, 'thumbnail'));
-    // exit;
+    
+    if(count($_custom_product_gallery) == 1)
+    {
+      $hide_class='arrow_false';
+    }else
+    {
+      $hide_class=' ';
+    }
     echo '<input type="button" class="button" style="margin-bottom:5px" value="Select Receipt Files" is-multiple="1" id="custom_product_gallery_button">';
     echo '<div id="custom_product_gallery_container">';
-    echo '<div class="lightbox_slider_container">';
+    echo '<div class="lightbox_slider_container '.$hide_class.'">';
     echo '<div class="custom_slider">';
       foreach ($_custom_product_gallery as $image_id) {
         $attacment_url=wp_get_attachment_url($image_id);
@@ -40,7 +46,7 @@ function custom_meta_box_markup($post) {
           src="'.plugins_url('assets/images/pagination_right_icon.png', __FILE__).'"
           alt="Next"
         />
-      </button>';
+      </button></div>';
       echo '<div class="slider_lightbox">
       <button class="lightbox__close">×</button>
       <button class="lightbox__prev">
@@ -49,7 +55,7 @@ function custom_meta_box_markup($post) {
           alt="Previous"
         />
       </button>
-      <div class="lightbox__content"></div>
+      <div class="lightbox__content '.$hide_class.'"></div>
       <button class="lightbox__next">
         <img
           src="'.plugins_url('assets/images/pagination_right_icon.png', __FILE__).'"
@@ -57,7 +63,6 @@ function custom_meta_box_markup($post) {
         />
       </button>
     </div>';
-    echo '</div>';
     echo '</div>';
 }
 function add_custom_meta_box() {

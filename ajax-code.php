@@ -6,8 +6,16 @@ function save_custom_product_gallery() {
 
     // Debug: Check if AJAX action is triggered
    // error_log('AJAX action triggered');
-   echo '<div class="lightbox_slider_container">';
-   echo '<div class="lightbox_slider_container">';
+    //echo '<div class="lightbox_slider_container">';
+    if(count($image_ids) == 1)
+    {
+      $hide_class='arrow_false';
+    }else
+    {
+      $hide_class=' ';
+    }
+
+    echo '<div class="lightbox_slider_container '.$hide_class.'">';
     echo '<div class="custom_slider">';
       foreach ($image_ids as $image_id) {
         $attacment_url=wp_get_attachment_url($image_id);
@@ -34,8 +42,8 @@ function save_custom_product_gallery() {
           src="'.plugins_url('assets/images/pagination_right_icon.png', __FILE__).'"
           alt="Next"
         />
-      </button>';
-      echo '<div class="slider_lightbox">
+      </button></div>';
+      echo '<div class="slider_lightbox '.$hide_class.'">
       <button class="lightbox__close">×</button>
       <button class="lightbox__prev">
         <img
@@ -51,7 +59,6 @@ function save_custom_product_gallery() {
         />
       </button>
     </div>';
-    echo '</div>';
     die();
 }
 add_action('wp_ajax_save_custom_product_gallery', 'save_custom_product_gallery');
