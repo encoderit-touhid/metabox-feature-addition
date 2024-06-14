@@ -7,8 +7,8 @@
  */
 
  //define('POST_TYPE','greentech_sectors');
- //define('POST_TYPE','greentech_case_study');
- define('POST_TYPE','expense');
+ define('POST_TYPE','greentech_case_study');
+ //define('POST_TYPE','expense');
 
 
  require_once( dirname( __FILE__ ).'/image-gallery.php' );
