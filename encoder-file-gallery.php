@@ -8,6 +8,7 @@
 
  //define('POST_TYPE','greentech_sectors');
  define('POST_TYPE','greentech_case_study');
+ 
  //define('POST_TYPE','expense');
 
 
