@@ -25,7 +25,7 @@
        // slider_functionalities();
     }) 
        
-   // alert($('#wpadminbar').css("backgroundColor"));
+   
     $('.slider__prev').css('backgroundColor',$('#wpadminbar').css("backgroundColor"))
     $('.slider__next').css('backgroundColor',$('#wpadminbar').css("backgroundColor"))
     $('.lightbox__next').css('backgroundColor',$('#wpadminbar').css("backgroundColor"))

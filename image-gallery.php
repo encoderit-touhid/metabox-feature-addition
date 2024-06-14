@@ -23,7 +23,7 @@ function custom_meta_box_markup($post) {
     echo '<div class="custom_slider">';
       foreach ($_custom_product_gallery as $image_id) {
         $attacment_url=wp_get_attachment_url($image_id);
-      //  var_dump(  $attacment_url);
+    
         if(str_contains($attacment_url,'pdf'))
         {
           $attacment_url=$attacment_url.'#toolbar=0';

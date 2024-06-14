@@ -6,7 +6,7 @@ function save_custom_product_gallery() {
 
     // Debug: Check if AJAX action is triggered
    // error_log('AJAX action triggered');
-    //echo '<div class="lightbox_slider_container">';
+   
     if(count($image_ids) == 1)
     {
       $hide_class='arrow_false';
@@ -19,7 +19,7 @@ function save_custom_product_gallery() {
     echo '<div class="custom_slider">';
       foreach ($image_ids as $image_id) {
         $attacment_url=wp_get_attachment_url($image_id);
-      //  var_dump(  $attacment_url);
+   
         if(str_contains($attacment_url,'pdf'))
         {
           $attacment_url=$attacment_url.'#toolbar=0';
